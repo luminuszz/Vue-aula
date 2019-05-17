@@ -6,13 +6,17 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     </head>
     <body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <div id="app">
-       <img v-bind:src="imagem" v-bind:alt="legenda">
-
+        <div>
+            <button class="btn" v-bind:class="btnClassenviar">Enviar</button>
+            <button class="btn"v-bind:class="btnClasslimpar" >Limpar</button>
+        </di
+        </div>
     </div>
     
     <script>
@@ -20,9 +24,14 @@
 
                 el: "#app",
                 data: {
-                    imagem: "atalho-teclado-shortcut.jpg",
-                    legenda: "delecia cara",
+                    btnClasslimpar: {
+                        "btn-danger":true,
+                        "btn-sm": true,
+    
+                         },
+                    btnClassenviar: "btn-primary btn-lg"
                     
+                
                     
                 }
         });
