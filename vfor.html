@@ -11,8 +11,11 @@
     <body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <div id="app">
-        
-        
+        <ul>
+            <li v-for="(item, index) in Linguagens" :key="index">{{index}} - {{ item.nome }}</li>
+
+        </ul>
+
     </div>
     
     <script>
@@ -20,6 +23,13 @@
 
                 el: "#app",
                 data: {
+                    Linguagens:[
+                        {nome: "javascript"},
+                        {nome: "PHP"},
+                        {nome: "C#"},
+                        {nome: "JAVA"},
+                        {nome: "Python"},
+                    ]
                     
                 }
         });
