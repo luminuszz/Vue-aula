@@ -11,22 +11,33 @@
     <body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <div id="app">
+        <div v-if="usuario.id  == 1">
+            <h1>{{usuario.nome}}</h1><br>
+            <h1>{{usuario.profisssao}}</h1>
 
-        <h1>{{titulo}}</h1>
-        <p v-if="texto">
-            sdsadsadhasgdashgdhasgdhasgd
-        </p>
+        </div>
+
+        <div v-else>
+            <H1>não existe texto</H1>
+        </div>
+
     </div>
-
+    
     <script>
         var app =  new Vue({
 
                 el: "#app",
                 data: {
-                    texto: false,
-                    titulo: "que delecia cara ! "
+                    usuario:{
+                    titulo: "que delecia cara ! ",
+                    id: 1,
+                    nome: "jhon snow",
+                    profisssao: "padeira"
+                    }
                 }
         });
+
+        
     </script>
 
         
