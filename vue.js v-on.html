@@ -13,9 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <div id="app">
         <div>
-            <button class="btn" v-bind:class="btnClassenviar"v-bind:style="teste">Enviar</button>
-            <button class="btn"v-bind:class="btnClasslimpar" >Limpar</button>
-        </div>
+            <form action="https://www.google.com" method="get">
+                <button class="btn btn-primary" type="submit" v-on:click.prevent.stop="enviar()">Enviar</button>
+                <!-- pode-se utliar tambem de forma abreviado o "@" -->
+
+            </form>    
         </div>
     </div>
     
@@ -23,26 +25,23 @@
         var app =  new Vue({
 
                 el: "#app",
-                data: {
-                    teste: [
-                        {'font-size': '100px'}
-
-                    
-
-
-
-                    ],
-                        
-
-                    
-                         
-                    btnClassenviar: "btn-primary btn-lg"
-                    
+                data: {  
                 
                     
-                }
+                },
+
+
+              methods: {
+                  enviar(){
+                      alert("Enviado");
+                  }
+
+                  
+
+              },
         });
 
+       
         
     </script>
 
