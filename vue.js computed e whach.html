@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <div id="app">
+        <h2>
+            {{nome}}
+            <br>
+            {{toUpperCase}}    
+    
+        </h2>
+        
+    </div>
+    
+    <script>
+        var app =  new Vue({
+
+                el: "#app",
+                data: {
+                    nome: "Davi"
+                    
+                    
+                    
+                },
+
+
+                computed: {
+
+                    toUpperCase(){
+
+                        return this.nome.toUpperCase()
+                    }
+
+
+                    },
+                    
+                watch: {
+                    nome(valor_novo,  valor_velho){
+                    console.log("valor_novo", valor_novo);
+                    console.log("valor_velho", valor_velho);
+                    }
+                },
+        
+        });
+
+        
+    </script>
+
+        
+        
+        
+    </body>
+</html>
